@@ -1,26 +1,36 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  outline: none;
+}
+:root {
+  --active-input: hsl(278, 94%, 30%);
+  --active-input-border: linear-gradient(
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
+  --input-errors: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: 222, 221, 223;
+  --Dark-grayish-violet: 142, 133, 147;
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --big-font-size: calc(var(--normal-font-size) * 1.6);
+  --x2normal-font-size: 1.2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.85rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.65rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+@media screen and (max-width: 375px) {
+  :root {
+    --big-font-size: calc(var(--normal-font-size) * 1.6);
+    --normal-font-size: 0.9rem;
+    --small-font-size: 0.75rem;
+    --smaller-font-size: 0.65rem;
+    --tiny-font-size: 0.55rem;
   }
 }
